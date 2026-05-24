@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+:root {
+  --black-shades: #141414;
+}
+@layer base {
+  body {
+    background-color: var(--black-shades);
+  }
+}
