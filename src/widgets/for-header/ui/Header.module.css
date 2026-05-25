@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 2px solid transparent;
+  animation-name: scrolling-header;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+  animation-fill-mode: both;
+}
+
+@keyframes scrolling-header {
+  to {
+    background-color: #141414;
+    border-color: #262626;
+  }
+}
