@@ -15,7 +15,7 @@ export function Header() {
           <SvgComponents width={60} height={60} id={'movie-logo'} />
           <p>Movie</p>
         </div>
-        <ul className="flex gap-7.5 py-6 px-4.5 rounded-xl bg-[#0f0f0f] border-4 border-[#1a1a1a]">
+        <ul className="flex gap-7.5 py-5 px-4.5 rounded-xl bg-[#0f0f0f] border-4 border-[#1a1a1a]">
           <li>
             <NavLink to={'/'} className={setActive}>
               Home
