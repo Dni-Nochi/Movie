@@ -1,0 +1,27 @@
+.movie_background {
+  --heroGradientColorStart: #141414;
+  --heroGradientColorEnd: rgb(20 20 20 / 0);
+
+  --heroGradientHeight: 67.5%;
+
+  --heroGradientTop: linear-gradient(
+      to bottom,
+      var(--heroGradientColorStart) 0%,
+      var(--heroGradientColorEnd) 100%
+    )
+    50% 0/100% var(--heroGradientHeight);
+
+  --heroGradientBottom: linear-gradient(
+      to top,
+      var(--heroGradientColorStart) 0%,
+      var(--heroGradientColorEnd) 100%
+    )
+    50% 101%/100% var(--heroGradientHeight);
+
+  flex-grow: 1;
+  background:
+    var(--heroGradientTop),
+    var(--heroGradientBottom),
+    url('../../../shared/assets/img/Group.png') 50% / cover;
+  background-repeat: no-repeat;
+}

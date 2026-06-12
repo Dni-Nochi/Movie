@@ -1,13 +1,12 @@
-interface Button {
-  className: string;
-  children: string;
+interface ButtonProps {
+  className?: string;
+  children: React.ReactNode;
 }
-export function Button(props: Button) {
+export function Button(props: ButtonProps) {
   const { className, children } = props;
-  console.log(children);
   return (
     <button
-      className={`${className} py-4.5 px-6 rounded-lg cursor-pointer bg-[#e50000]`}
+      className={`${className} flex items-center py-4.5 px-6 rounded-lg cursor-pointer bg-[#e50000]`}
     >
       {children}
     </button>
