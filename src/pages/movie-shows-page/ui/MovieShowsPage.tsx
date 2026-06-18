@@ -1,5 +1,5 @@
-import { MovieShowsCard } from '@/entities/movie-shows-card/ui/MovieShowsCard';
 import { Button } from '@/shared/ui/button';
+import { AnimeList } from '@/widgets/anime-list';
 
 export function MovieShowsPage() {
   return (
@@ -13,10 +13,7 @@ export function MovieShowsPage() {
         <Button children={'Rating'} />
         <Button children={'Year of issue'} />
       </div>
-
-      <div>
-        <MovieShowsCard />
-      </div>
+      <AnimeList />
     </div>
   );
 }
