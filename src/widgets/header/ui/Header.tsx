@@ -2,10 +2,11 @@ import { NavLink } from 'react-router-dom';
 import { SvgComponents } from '@/shared/ui/svg-components';
 import styles from './Header.module.css';
 
-const setActive = ({ isActive }: { isActive: boolean }) =>
-  isActive
+const setActive = ({ isActive }: { isActive: boolean }) => {
+  return isActive
     ? 'py-3 px-6 bg-[#1a1a1a] rounded-lg'
     : 'opacity-50 duration-300 hover:opacity-100';
+};
 
 export function Header() {
   return (
@@ -39,7 +40,14 @@ export function Header() {
         </ul>
         <div className="flex gap-7.5">
           <SvgComponents width={34} height={34} id={'loop'} />
-          <SvgComponents width={34} height={34} id={'notification'} />
+          <NavLink to={'loginPage'}>
+            <SvgComponents
+              width={34}
+              height={34}
+              id={'user'}
+              useClassName="fill-white"
+            />
+          </NavLink>
         </div>
       </nav>
     </header>

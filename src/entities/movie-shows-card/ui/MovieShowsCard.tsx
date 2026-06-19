@@ -12,7 +12,7 @@ export function MovieShowsCard({
   return (
     <article
       key={mal_id}
-      className="flex justify-center w-75 min-h-105 p-7.5 bg-[#1a1a1a] rounded-xl transition-shadow duration-300 shadow-xl hover:shadow-[#e50000]"
+      className="flex justify-center w-75 min-h-105 p-7.5 bg-[#1a1a1a] rounded-xl transition duration-300 shadow-xl hover:shadow-[#e50000] hover:scale-108"
     >
       <a
         className="flex flex-col gap-3.5"
