@@ -7,7 +7,7 @@ export function Button(props: ButtonProps) {
   return (
     <button
       type={type}
-      className={`${className} transition duration-300 flex items-center py-2 px-6 rounded-lg bg-[#c0392b] hover:opacity-60`}
+      className={`${className} flex items-center py-2 px-6 rounded-lg bg-[#c0392b] transition duration-200 hover:opacity-80 active:scale-90`}
       {...rest}
     >
       {children}

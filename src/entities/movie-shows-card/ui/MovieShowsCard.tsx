@@ -1,3 +1,4 @@
+import { SvgComponents } from '@/shared/ui/svg-components';
 import type { AnimeShows } from '../model/types';
 
 export function MovieShowsCard({
@@ -12,33 +13,46 @@ export function MovieShowsCard({
   return (
     <article
       key={mal_id}
-      className="flex justify-center w-75 min-h-105 p-7.5 bg-[#1a1a1a] rounded-xl transition duration-300 shadow-xl hover:shadow-[#e50000] hover:scale-108"
+      className="flex w-85 min-h-105 bg-[#1a1a1a] border border-[#ffffff12] rounded-t-2xl rounded-b-2xl transition duration-300 shadow-xl hover:shadow-[#e50000] hover:scale-108"
     >
       <a
-        className="flex flex-col gap-3.5"
+        className="flex flex-col gap-3.5 w-full"
         href={url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={images.webp.image_url} className="w-60 h-62 rounded-xl" />
-        <div className="flex justify-between px-1">
-          <p>{title}</p>
-          <p>{score}</p>
+        <img
+          src={images.webp.image_url}
+          className=" w-full h-120 rounded-t-xl"
+        />
+        <div className="flex flex-col gap-2.5 px-3 pb-6">
+          <div className="flex justify-between px-1">
+            <p className="text-lg">{title}</p>
+            <span className="flex items-center gap-1.5 text-[#f0c14b]">
+              <SvgComponents
+                id="star"
+                width={24}
+                height={24}
+                useClassName="stroke-[#f0c14b]"
+              />
+              {score}
+            </span>
+          </div>
+          <p className="px-1 text-[#7a7a7a]">{year}</p>
+          <div className="flex flex-wrap gap-2 px-1">
+            {genres.map((genre, index) => {
+              const firstGenre = index === 0;
+              return (
+                <span
+                  className={`${firstGenre ? 'text-[#e88a7d] bg-[#c0392b26]' : 'text-[#aaa] bg-[#ffffff0f]'} w-fit h-fit py-1 px-2 rounded-lg`}
+                  key={genre.mal_id}
+                >
+                  {genre.name}
+                </span>
+              );
+            })}
+          </div>
         </div>
-        <p className="px-1">{year}</p>
-        <div className="flex flex-wrap gap-2 px-1">
-          {genres.map((genre) => {
-            return (
-              <p
-                className="w-fit h-fit p-1 bg-[#2d2d2d] rounded-md"
-                key={genre.mal_id}
-              >
-                {genre.name}
-              </p>
-            );
-          })}
-        </div>
-        <p>стрелка</p>
       </a>
     </article>
   );
