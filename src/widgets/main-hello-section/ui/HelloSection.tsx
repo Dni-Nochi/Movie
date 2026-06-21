@@ -16,7 +16,7 @@ export function HelloSection() {
         you can easily find the content you want to watch.
       </p>
       <NavLink to={'/movieAndShows'}>
-        <Button className="absolute bottom-0 right-[50%] translate-x-[50%] transition-opacity duration-300 hover:opacity-60">
+        <Button className="absolute bottom-0 right-[50%] translate-x-[50%] cursor-pointer transition duration-300 hover:opacity-60">
           <SvgComponents
             width={20}
             height={20}

@@ -27,16 +27,6 @@ export function Header() {
               Movie & Shows
             </NavLink>
           </li>
-          <li>
-            <NavLink to={'support'} className={setActive}>
-              Support
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={'subscription'} className={setActive}>
-              Subscriptions
-            </NavLink>
-          </li>
         </ul>
         <div className="flex gap-7.5">
           <SvgComponents width={34} height={34} id={'loop'} />
