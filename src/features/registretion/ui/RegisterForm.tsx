@@ -61,7 +61,7 @@ export function RegistrationForm() {
         className={hasErrors ? 'bg-black cursor-not-allowed' : 'cursor-pointer'}
         type="submit"
       >
-        Сохранить
+        Войти
       </Button>
     </form>
   );

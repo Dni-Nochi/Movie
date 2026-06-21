@@ -3,7 +3,7 @@ import { DeviceInfoCard } from '@/entities/device-info-card';
 
 export function ProvideStreaming() {
   return (
-    <div className="flex flex-wrap gap-7.5 mx-40.5 pt-37.5 text-white">
+    <div className="flex flex-wrap justify-center gap-7.5 mx-30 pt-37.5 text-white">
       <div className="pb-10">
         <h2 className="text-3xl">
           We Provide you streaming experience across various devices.

@@ -1,6 +1,11 @@
 import { useState } from 'react';
+import { useAppDispatch } from '@/app/store/hooks';
+import { useNavigate } from 'react-router-dom';
+import { login } from '@/entities/user/model/userSlice';
 
 export function useRegistrationForm() {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
@@ -53,7 +58,14 @@ export function useRegistrationForm() {
   function submitForm(e: React.FormEvent<HTMLFormElement>) {
     try {
       e.preventDefault();
-      console.log('asd');
+      dispatch(
+        login({
+          userName: userName,
+          userEmail: userEmail,
+          userPassword: userPassword,
+        }),
+      );
+      navigate('/', { replace: true });
     } catch (e) {
       console.log(e);
     }

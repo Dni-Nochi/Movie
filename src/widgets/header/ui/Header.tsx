@@ -11,7 +11,7 @@ const setActive = ({ isActive }: { isActive: boolean }) => {
 export function Header() {
   return (
     <header className={`${styles.header} sticky top-0 z-100`}>
-      <nav className="flex items-center justify-between mx-40.5 py-2.5 text-white">
+      <nav className="flex items-center justify-between mx-30 py-2.5 text-white">
         <div className="flex items-center gap-2">
           <SvgComponents width={60} height={60} id={'movie-logo'} />
           <p>Movie</p>

@@ -5,7 +5,7 @@ import { SvgComponents } from '@/shared/ui/svg-components';
 export function Footer() {
   return (
     <footer className="mt-37.5 bg-[#0f0f0f]">
-      <div className="flex mx-40.5 py-24.5">
+      <div className="flex justify-between mx-30 py-24.5">
         <FooterColumn arrays={footerCategories} />
         <div className=" text-white">
           <p>Connect With Us</p>
@@ -51,7 +51,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between mx-40.5 border-t-2 border-[#262626] pt-5 pb-12 text-[#999]">
+      <div className="flex justify-between mx-30 border-t-2 border-[#262626] pt-5 pb-12 text-[#999]">
         <p>@2026 Movie, All Rights Reserved</p>
         <div className="flex">
           <p className="pr-4">Terms of Use</p>
